@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAINS INDEX</title>
+</head>
+
+<body>
+    <h1>
+        TRAINS
+    </h1>
+
+    <a href="/train/register">Add a Company</a>
+
+    <% %>
+
+        <% for (let train of trains) { %>
+            <ul>
+                <li>
+                    Train Name : <%= train.trainName %>
+                </li>
+                <li>
+                    Train Number : <%= train.trainNumber %>
+                </li>
+                <li>
+                    Train DepartureTime : <%= train.departureTime.hours %> hrs, <%= train.departureTime.minutes %> mins
+                            ,
+                            <%= train.departureTime.seconds %> secs
+                </li>
+                <li>
+                    Seats Available : Sleeper <%= train.seatsAvailable.sleeper %> , AC <%= train.seatsAvailable.ac %>
+                </li>
+                <li>
+                    Price : Sleeper <%= train.price.sleeper %> , AC <%= train.price.ac %>
+                </li>
+                <li>
+                    Delayed By : <%= train.delayedBy %>
+                </li>
+
+                <br><br>
+            </ul>
+            <% } %>
+
+</body>
+
+</html>
